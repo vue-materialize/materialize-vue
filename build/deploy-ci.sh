@@ -1,10 +1,10 @@
 #! /bin/sh
 mkdir temp_web
 
-if [ "$ROT_TOKEN" = "" ]; then
-  echo "Bye~"
-  exit 0
-fi
+#if [ "$ROT_TOKEN" = "" ]; then
+#  echo "Bye~"
+#  exit 0
+#fi
 
 #release
 if ["$TRAVIS_TAG"]; then
