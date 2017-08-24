@@ -7,7 +7,7 @@ mkdir temp_web
 #fi
 
 #release
-if ["$TRAVIS_TAG"]; then
+if [ "$TRAVIS_TAG" ]; then
   # build site
   npm run deploy:build
   cd temp_web
