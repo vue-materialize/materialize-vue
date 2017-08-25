@@ -17,15 +17,15 @@ if [ "$TRAVIS_TAG" ]; then
   export SUB_FOLDER=$(echo "$TRAVIS_TAG" | grep -o -E "\d+\.\d+")
   echo $SUB_FOLDER
 
-  #SUB_FOLDER='0.1'
+  SUB_FOLDER='0.1'
   mkdir $SUB_FOLDER
   rm -rf *.js *.css *.map static
-  rm -rf $SUB_FOLDER
+  rm -rf $SUB_FOLDER/**
   cp -rf ../../document/mvui/** .
   cp -rf ../../document/mvui/** $SUB_FOLDER
   git add -A .
   git commit -m "$TRAVIS_COMMIT_MSG"
-  git puhs origin gh-pages
+  git push origin gh-pages
   cd ../..
 
   echo "DONE, Bye~"

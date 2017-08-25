@@ -29,7 +29,7 @@ var webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': config.dev.env
+      'process.env': isProd ? config.build.env : config.dev.env
     }),
     new FriendlyErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
