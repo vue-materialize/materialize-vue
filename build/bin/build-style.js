@@ -6,16 +6,15 @@ var sass = require('gulp-sass')
 var cssmin = require('gulp-cssmin')
 
 gulp.task('compile', function () {
-  return gulp.src('./packages/theme-default/src/*.scss')
+  return gulp.src('../../packages/theme-default/src/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cssmin())
-    .pipe(gulp.dest('./packages/theme-default/lib'))
+    .pipe(gulp.dest('../../packages/theme-default/lib'))
 })
 
 gulp.task('copyfont', function () {
-  return gulp.src('./packages/theme-default/src/fonts')
+  return gulp.src('../../packages/theme-default/src/fonts/**')
     .pipe(cssmin())
-    .pipe(gulp.dest('./packages/theme-default/lib/fonts'))
+    .pipe(gulp.dest('../../packages/theme-default/lib/fonts'))
 })
-
 gulp.task('build', ['compile', 'copyfont'])
