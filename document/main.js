@@ -2,7 +2,29 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import VueRouter from 'vue-router'
+import routes from './route.config'
+import Mvui from 'main/index.js'
+import 'packages/theme-default/src/index.scss'
+import { Button } from 'vue-multiple-button'
+import 'vue-multiple-button/lib/button.css'
+import SideNav from './components/side-nav.vue'
+import FooterNav from './components/footer-nav.vue'
+import DemoBlock from './components/demo-block.vue'
+import 'highlight.js/styles/color-brewer.css'
+
+Vue.use(Mvui)
+Vue.use(VueRouter)
+Vue.component('vm-button', Button)
+Vue.component('side-nav', SideNav)
+Vue.component('footer-nav', FooterNav)
+Vue.component('demo-block', DemoBlock)
+
+const router = new VueRouter({
+  mode: 'hash',
+  base: __dirname,
+  routes: routes
+})
 
 Vue.config.productionTip = false
 

@@ -24,9 +24,10 @@ if (!process.argv[2]) {
 var path = require('path')
 var fileSave = require('file-save')
 var uppercamelcase = require('uppercamelcase') // Pascal Case
-var componentName = process.argv[2]
+var componentName = process.argv[2] // 组件名称
+var chineseName = process.argv[3] || componentName // 组件中文名称
 var ComponentName = uppercamelcase(componentName)
-var PackagePath = path.resolve(__dirname, '../../packages', componentName)
+var PackagePath = path.resolve(__dirname, '../../packages', componentName) // 组件所在路径
 var Files = [
   {
     filename: 'index.js',
@@ -49,6 +50,10 @@ export default ${ComponentName}`
     name: 'Mv${ComponentName}'
   }
 </script>`
+  },
+  {
+    filename: path.join('../../docs/', `${componentName}.md`),
+    content: `## ${ComponentName} ${chineseName}`
   },
   {
     filename: path.join('../../test/unit/specs', `${ComponentName}.spec.js`),

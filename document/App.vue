@@ -1,23 +1,143 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
-
 <script>
   export default {
-    name: 'app'
+    name: 'app',
+
+    methods: {
+      renderAnchorHref () {
+        const anchors = document.querySelectorAll('h2 a,h3 a')
+        const basePath = location.href.split('#').splice(0, 2).join('#')
+
+        ;[].slice.call(anchors).forEach(a => {
+          const href = a.getAttribute('href')
+          a.href = basePath + href
+        })
+      },
+      goAnchor () {
+        if (location.href.match(/#/g).length > 1) {
+          const anchor = location.href.match(/#[^#]+$/g)
+          if (!anchor) return
+          const elm = document.querySelector(anchor[0])
+          if (!elm) return
+
+          setTimeout(_ => {
+            document.documentElement.scrollTop = document.body.scrollTop = elm.offsetTop + 120
+          })
+        }
+      }
+    },
+
+    mounted () {
+      this.renderAnchorHref()
+      this.goAnchor()
+    },
+
+    created () {
+      window.addEventListener('hashchange', () => {
+        if (location.href.match(/#/g).length < 2) {
+          document.documentElement.scrollTop = document.body.scrollTop = 0
+          this.renderAnchorHref()
+        } else {
+          this.goAnchor()
+        }
+      })
+    }
   }
 </script>
-
-<style>
+<style lang="scss" rel="stylesheet/scss">
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+    overflow: auto;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+  }
+  a {
+    color: #4078c0;
+    text-decoration: none;
+  }
+  code {
+    background-color: #f9fafc;
+    padding: 0 4px;
+    border: 1px solid #eaeefb;
+    border-radius: 4px;
+  }
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+  .hljs {
+    line-height: 1.8;
+    font-family: Menlo, Monaco, Consolas, Courier, monospace;
+    font-size: 12px;
+    padding: 18px 24px;
+    background-color: #f9fafc;
+    border: solid 1px #eaeefb;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    -webkit-font-smoothing: auto;
+  }
+  .page-container {
+    width: 1140px;
+    padding: 55px 30px 0 30px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 28px;
+      color: #1f2d3d;
+      margin: 0;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h2, h3, h4, h5 {
+      font-weight: normal;
+      color: #1f2f3d;
+
+      &:hover a {
+        opacity: .4;
+      }
+
+      a {
+        float: left;
+        margin-left: -20px;
+        opacity: 0;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .4;
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      color: #5e6d82;
+      line-height: 1.5em;
+    }
+    .tip {
+      padding: 8px 16px;
+      background-color: #ECF8FF;
+      border-radius: 4px;
+      border-left: #50bfff 5px solid;
+      margin-top: 20px;
+
+      code {
+        background-color: rgba(#fff, .7);
+        color: #445368;
+      }
+    }
   }
 </style>

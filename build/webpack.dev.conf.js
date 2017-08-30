@@ -41,14 +41,15 @@ var webpackConfig = merge(baseWebpackConfig, {
   ]
 })
 
-if (isProd) {
+if (isProd)  {
   webpackConfig.output.chunkFilename = isProd ? '[name].[chunkhash:7].js' : '[name].js'
   webpackConfig.externals = [
     {
       vue: 'Vue',
       'vue-router': 'VueRouter'
-    },
-    nodeExternals()
+    }
+    // ,
+    // nodeExternals()
   ]
   webpackConfig.plugins.push.apply(webpackConfig.plugins, [
     new webpack.optimize.UglifyJsPlugin({
