@@ -10,15 +10,15 @@
     "packages"
   ],
   "scripts": {
-    "//": "eslint 检测",
     "bootstrap": "yarn || npm i",
     "new": "node build/bin/new.js",
+    "remove": "node build/bin/remove.js",
     "build:file": "node build/bin/build-entry.js",
     "build:theme": "gulp build --gulpfile ./build/bin/build-style.js && cp-cli packages/theme-default/lib lib/theme-default",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf test/**/coverage && lerna clean --yes",
-    "dev": "npm run bootstrap && npm run build:file && webpack-dev-server --content-base ./document --open --inline --hot --watch --config ./build/webpack.dev.conf.js --progress",
-    "dev:play": "npm run build:file && cross-env PLAY_ENV=true webpack-dev-server --content-base ./playground --open --inline --hot --watch --config ./build/webpack.dev.conf.js --progress",
+    "dev": "npm run bootstrap && npm run build:file && webpack-dev-server --content-base ./document --inline --watch --hot --config ./build/webpack.dev.conf.js --quiet --info=false",
+    "dev:play": "npm run build:file && cross-env PLAY_ENV=true webpack-dev-server --content-base ./playground --inline --watch --hot --config ./build/webpack.dev.conf.js --info=false",
     "dist": "npm run clean && npm run build:file && npm run lint && webpack --config ./build/webpack.common.conf.js --progress && webpack --config ./build/webpack.component.conf.js --progress && webpack --config ./build/webpack.prod.conf.js --progress && npm run build:utils && npm run build:theme",
     "deploy:build": "npm run build:file && cross-env NODE_ENV='production' webpack --config ./build/webpack.dev.conf.js && echo mvui.savoygu.com>>document/mvui/CNAME",
     "deploy": "npm run deploy:build && gh-pages -d document/mvui --remote origin && rimraf document/mvui",

@@ -6,20 +6,12 @@
         "groupName": "Basic 基础",
         "list": [
           {
-            "path": "/layout",
-            "title": "Layout 布局"
-          },
-          {
             "path": "/color",
             "title": "Color 色彩"
           },
           {
             "path": "/typography",
             "title": "Typography 字体"
-          },
-          {
-            "path": "/icon",
-            "title": "Icon 图标"
           },
           {
             "path": "/button",
@@ -41,10 +33,6 @@
           {
             "path": "/input",
             "title": "Input 输入框"
-          },
-          {
-            "path": "/select",
-            "title": "Select 选择器"
           },
           {
             "path": "/switch",

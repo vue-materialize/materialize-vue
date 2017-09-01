@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin: 20px;">
     <button-play></button-play>
   </div>
 </template>

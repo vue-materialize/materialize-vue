@@ -3,9 +3,7 @@ describe('Button', () => {
 
   })
   it('icon', () => {
-
   })
   it('nativeType', () => {
-
   })
 })

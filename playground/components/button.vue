@@ -1,8 +1,9 @@
 <template>
   <div>
-    <mv-button></mv-button>
+    <mv-button>Button</mv-button>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+  }
 </script>
