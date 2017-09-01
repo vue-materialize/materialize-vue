@@ -12,7 +12,7 @@ var components = require('../../components.json')
 var path = require('path')
 var uppercamelcase = require('uppercamelcase') // Pascal case
 var render = require('json-templater/string')
-var endOfLine = require('os').endOfLine // 换行
+var endOfLine = require('os').EOL // 换行
 var fs = require('fs')
 
 var OUTPUT_PATH = path.join(__dirname, '../../src/index.js')

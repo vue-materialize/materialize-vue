@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Mvui from 'main/index.js'
 import App from './App.vue'
-// import ''
+import 'packages/theme-default/src/index.scss'
 
 Vue.use(Mvui)
 

@@ -4,10 +4,10 @@
   </div>
 </template>
 <script>
-  import ButtonPlay from './components/button.vue'
+  import Button from './components/button.vue'
   export default {
     components: {
-      ButtonPlay
+      ButtonPlay: Button
     }
   }
 </script>
