@@ -58,7 +58,8 @@ if (isProd)  {
       }
     }),
     new ExtractTextPlugin({
-      filename: '[name].[contenthash:7].css'
+      filename: '[name].[contenthash:7].css',
+      allChunks: true
     }),
     // 压缩抽取的 CSS。 我们正在使用此插件，以便可以重复使用来自不同组件的可能重复的CSS。
     new OptimizeCSSPlugin({
