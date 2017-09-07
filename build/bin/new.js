@@ -28,7 +28,7 @@ var componentName = process.argv[2] // 组件名称
 var chineseName = process.argv[3] || componentName // 组件中文名称
 var ComponentName = uppercamelcase(componentName)
 var PackagePath = path.resolve(__dirname, '../../packages', componentName) // 组件所在路径
-/*var IMPORT_TEMPLATE = `  import {{name}} from './components/{{package}}.vue'`
+/* var IMPORT_TEMPLATE = `  import {{name}} from './components/{{package}}.vue'`
 var REGISTER_TEMPLATE = `      {{name}}Play: {{name}}`
 // playground 入口模板
 var MAIN_TEMPLATE = `<template>
@@ -43,7 +43,7 @@ var MAIN_TEMPLATE = `<template>
 {{register}}
     }
   }
-</script>`*/
+</script>` */
 var Files = [
   {
     filename: 'index.js',
@@ -107,7 +107,7 @@ fileSave(path.join(__dirname, '../../components.json'))
   .end('\n')
 
 // playground 入口模板内容填充
-/*var includeTemplate = []
+/* var includeTemplate = []
 var registerTemplate = []
 Object.keys(componentsFile).forEach(function (name) {
   var Name = uppercamelcase(name)
@@ -125,10 +125,9 @@ Object.keys(componentsFile).forEach(function (name) {
 Files[Files.length - 1].content = render(MAIN_TEMPLATE, {
   include: includeTemplate.join(endOfLine),
   register: registerTemplate.join(',' + endOfLine)
-})*/
+}) */
 var buildPlay = require('./build-play.js')
 Files[Files.length - 1].content = buildPlay(componentsFile, componentName)
-
 
 // 创建组件
 Files.forEach(function (file) {

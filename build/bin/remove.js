@@ -65,7 +65,7 @@ var navConfigFile = require('../../document/nav.config.json')
 var groups = navConfigFile[0].groups
 for (let i = 0, len = groups.length; i < len; i++) {
   groups[i].list = groups[i].list.filter(item => {
-    return item.path != `/${componentName}`
+    return item.path !== `/${componentName}`
   })
 }
 fileSave(path.join(__dirname, '../../document/nav.config.json'))
