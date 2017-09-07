@@ -100,6 +100,10 @@
           {
             "path": "/carousel",
             "title": "Carousel 走马灯"
+          },
+          {
+            "path": "/icon",
+            "title": "Icon 图标"
           }
         ]
       }

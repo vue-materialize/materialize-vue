@@ -14,7 +14,8 @@
     </div>
     <div class="demo-block-control" @click="isExpanded = !isExpanded">
       <transition name="arrow-slide">
-        <i :class="[iconClass, { 'hovering': hovering }]"></i>
+        <!--<i :class="[iconClass, { 'hovering': hovering }]"></i>-->
+        <mv-icon :name="iconClass" :class="{ 'hovering': hovering }" scale="2"></mv-icon>
       </transition>
       <transition name="text-slide">
         <span v-show="hovering">{{ isExpanded ? '隐藏代码' : '显示代码' }}</span>
@@ -85,7 +86,7 @@
       },
 
       iconClass () {
-        return this.isExpanded ? 'el-icon-caret-top' : 'el-icon-caret-bottom'
+        return this.isExpanded ? 'arrow_drop_up' : 'arrow_drop_down'
       },
 
       codeArea () {
@@ -211,7 +212,7 @@
       transition: .2s;
       position: relative;
 
-      i {
+      svg {
         font-size: 12px;
         line-height: 36px;
         transition: .3s;
@@ -221,7 +222,7 @@
       }
 
       span {
-        /*position: absolute;*/
+        position: absolute;
         transform: translateX(-30px);
         font-size: 14px;
         line-height: 36px;

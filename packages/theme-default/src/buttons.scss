@@ -3,6 +3,38 @@
 @import "global";
 @import "typography";
 
+.mv-button {
+  .mv-icon {
+    max-width: 1.6em;
+    vertical-align: top;
+    margin-top: calc(15px - .5em);
+    &.right {
+      margin-left: 15px;
+    }
+    &.left {
+      margin-right: 15px;
+    }
+  }
+  &.btn-large {
+    .mv-icon {
+      width: auto;
+      height: 1.6em;
+      vertical-align: top;
+      margin-top: calc(22px - .5em);
+    }
+  }
+  &.is-loading {
+    cursor: default;
+    box-shadow: none;
+    pointer-events: none;
+  }
+  &.btn-floating {
+    .mv-icon {
+      margin-top: calc(17px - .5em);
+    }
+  }
+}
+
 // shared styles
 .btn,
 .btn-flat {

@@ -5,9 +5,11 @@
 </template>
 <script>
   import Button from './components/button.vue'
+  import Icon from './components/icon.vue'
   export default {
     components: {
-      ButtonPlay: Button
+      ButtonPlay: Button,
+      IconPlay: Icon
     }
   }
 </script>

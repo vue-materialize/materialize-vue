@@ -41,7 +41,7 @@ var Files = [
 Files.forEach(function (file) {
   console.log(path.join(__dirname, file.path, file.filename))
   rimraf(path.join(__dirname, file.path, file.filename), {}, function (err) {
-    if (err) throw new Errr(err)
+    if (err) throw new Error(err)
   })
 })
 

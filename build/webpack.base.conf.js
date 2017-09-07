@@ -137,10 +137,10 @@ module.exports = {
             }],
             [require('markdown-it-container'), 'demo', {
               validate: function (params) {
-                return params.trim().match(/^demo\s+(.*)$/)
+                return params.trim().match(/^demo\s*(.*)$/)
               },
               render: function (tokens, idx) {
-                var m = tokens[idx].info.trim().match(/^demo\s+(.*)$/)
+                var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
                 if (tokens[idx].nesting === 1) {
                   var description = (m && m.length > 1) ? m[1] : ''
                   var content = tokens[idx + 1].content

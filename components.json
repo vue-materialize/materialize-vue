@@ -1,3 +1,4 @@
 {
-  "button": "./packages/button/index.js"
+  "button": "./packages/button/index.js",
+  "icon": "./packages/icon/index.js"
 }
