@@ -49,6 +49,8 @@
   }
 </script>
 <style lang="scss" rel="stylesheet/scss">
+  @import 'assets/color-brewer.css';
+
   html, body {
     margin: 0;
     padding: 0;

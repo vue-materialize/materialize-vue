@@ -9,7 +9,6 @@ import 'packages/theme-default/src/index.scss'
 import SideNav from './components/side-nav.vue'
 import FooterNav from './components/footer-nav.vue'
 import DemoBlock from './components/demo-block.vue'
-import 'highlight.js/styles/color-brewer.css'
 
 Vue.use(Mvui)
 Vue.use(VueRouter)
