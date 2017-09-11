@@ -49,7 +49,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('document'), resolve('palyground'), resolve('test')],
+        include: [resolve('src'), resolve('packages'), resolve('document'), resolve('palyground'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }

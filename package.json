@@ -25,7 +25,7 @@
     "pub": "npm run bootstrap && sh buid/git-release.sh && sh build/release.sh",
     "test": "npm run lint && cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test:watch": "karma start test/unit/karma.conf.js",
-    "lint": "eslint --ext .js,.vue src packages build test/unit/specs"
+    "lint": "eslint --ext .js,.vue src document packages build test/unit/specs"
   },
   "repository": {
     "type": "git",
