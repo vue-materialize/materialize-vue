@@ -73,7 +73,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('document'), resolve('palyground'), resolve('test')]
+        include: [resolve('src'), resolve('packages'), resolve('document'), resolve('palyground'), resolve('test')]
       },
       {
         test: /\.css$/,
