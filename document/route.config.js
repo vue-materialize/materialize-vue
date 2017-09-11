@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/layout',
+    redirect: '/grid',
     component: load('component'),
     children: []
   })

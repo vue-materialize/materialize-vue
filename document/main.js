@@ -6,8 +6,6 @@ import VueRouter from 'vue-router'
 import routes from './route.config'
 import Mvui from 'main/index.js'
 import 'packages/theme-default/src/index.scss'
-import { Button } from 'vue-multiple-button'
-import 'vue-multiple-button/lib/button.css'
 import SideNav from './components/side-nav.vue'
 import FooterNav from './components/footer-nav.vue'
 import DemoBlock from './components/demo-block.vue'
@@ -15,7 +13,6 @@ import 'highlight.js/styles/color-brewer.css'
 
 Vue.use(Mvui)
 Vue.use(VueRouter)
-Vue.component('vm-button', Button)
 Vue.component('side-nav', SideNav)
 Vue.component('footer-nav', FooterNav)
 Vue.component('demo-block', DemoBlock)

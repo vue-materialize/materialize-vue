@@ -6,104 +6,16 @@
         "groupName": "Basic 基础",
         "list": [
           {
-            "path": "/color",
-            "title": "Color 色彩"
-          },
-          {
-            "path": "/typography",
-            "title": "Typography 字体"
-          },
-          {
             "path": "/button",
             "title": "Button 按钮"
-          }
-        ]
-      },
-      {
-        "groupName": "Form 表单",
-        "list": [
-          {
-            "path": "/radio",
-            "title": "Radio 单选框"
-          },
-          {
-            "path": "/checkbox",
-            "title": "Checkbox 多选框"
-          },
-          {
-            "path": "/input",
-            "title": "Input 输入框"
-          },
-          {
-            "path": "/switch",
-            "title": "Switch 开关"
-          },
-          {
-            "path": "/slider",
-            "title": "Slider 滑块"
-          },
-          {
-            "path": "/time-picker",
-            "title": "TimePicker 时间选择器"
-          },
-          {
-            "path": "/date-picker",
-            "title": "DatePicker 日期选择器"
-          },
-          {
-            "path": "/upload",
-            "title": "Upload 上传"
-          }
-        ]
-      },
-      {
-        "groupName": "Data 数据",
-        "list": [
-          {
-            "path": "/table",
-            "title": "Table 表格"
-          },
-          {
-            "path": "/pagination",
-            "title": "Pagination 分页"
-          },
-          {
-            "path": "/badge",
-            "title": "Badge 标记"
-          }
-        ]
-      },
-      {
-        "groupName": "Navigation 导航",
-        "list": [
-          {
-            "path": "/dropdown",
-            "title": "Dropdown 下拉菜单"
-          },
-          {
-            "path": "/tabs",
-            "title": "Tabs 标签页"
-          }
-        ]
-      },
-      {
-        "groupName": "Others 其他",
-        "list": [
-          {
-            "path": "/tooltip",
-            "title": "Tooltip 文字提示"
-          },
-          {
-            "path": "/card",
-            "title": "Card 卡片"
-          },
-          {
-            "path": "/carousel",
-            "title": "Carousel 走马灯"
           },
           {
             "path": "/icon",
             "title": "Icon 图标"
+          },
+          {
+            "path": "/grid",
+            "title": "Grid 栅格系统"
           }
         ]
       }

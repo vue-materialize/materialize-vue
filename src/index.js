@@ -2,10 +2,14 @@
 
 import Button from '../packages/button/index.js'
 import Icon from '../packages/icon/index.js'
+import Row from '../packages/row/index.js'
+import Col from '../packages/col/index.js'
 
 const components = [
   Button,
-  Icon
+  Icon,
+  Row,
+  Col
 ]
 
 const install = function (Vue, opts = {}) {
@@ -26,5 +30,7 @@ export default {
   version: '0.0.0',
   install,
   Button,
-  Icon
+  Icon,
+  Row,
+  Col
 }

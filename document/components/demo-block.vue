@@ -8,7 +8,7 @@
     <div class="meta">
       <div class="description">
         <slot></slot>
-        <!--<vm-button size="small" type="primary" @click="goJsfiddle">在线运行</vm-button>-->
+        <!--<mv-button @click="goJsfiddle">在线运行</mv-button>-->
       </div>
       <slot name="highlight"></slot>
     </div>
