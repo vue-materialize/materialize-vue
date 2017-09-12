@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <col-play></col-play>
+    <breadcrumb-play></breadcrumb-play>
   </div>
 </template>
 <script>
@@ -8,12 +8,14 @@
   import Icon from './components/icon.vue'
   import Row from './components/row.vue'
   import Col from './components/col.vue'
+  import Breadcrumb from './components/breadcrumb.vue'
   export default {
     components: {
       ButtonPlay: Button,
       IconPlay: Icon,
       RowPlay: Row,
-      ColPlay: Col
+      ColPlay: Col,
+      BreadcrumbPlay: Breadcrumb
     }
   }
 </script>

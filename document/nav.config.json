@@ -16,6 +16,10 @@
           {
             "path": "/grid",
             "title": "Grid 栅格系统"
+          },
+          {
+            "path": "/breadcrumb",
+            "title": "Breadcrumb 面包屑"
           }
         ]
       }

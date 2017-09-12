@@ -4,12 +4,16 @@ import Button from '../packages/button/index.js'
 import Icon from '../packages/icon/index.js'
 import Row from '../packages/row/index.js'
 import Col from '../packages/col/index.js'
+import Breadcrumb from '../packages/breadcrumb/index.js'
+import BreadcrumbItem from '../packages/breadcrumb-item/index.js'
 
 const components = [
   Button,
   Icon,
   Row,
-  Col
+  Col,
+  Breadcrumb,
+  BreadcrumbItem
 ]
 
 const install = function (Vue, opts = {}) {
@@ -32,5 +36,7 @@ export default {
   Button,
   Icon,
   Row,
-  Col
+  Col,
+  Breadcrumb,
+  BreadcrumbItem
 }

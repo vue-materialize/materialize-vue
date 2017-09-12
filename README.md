@@ -10,6 +10,13 @@
 
 [Grid 栅格系统](http://mvui.savoygu.com/#/grid
 )
+
+[Switch 开关](http://mvui.savoygu.com/#/switch
+)
+
+[Breadcrumb 面包屑](http://mvui.savoygu.com/#/breadcrumb
+)
+
 ...
 
 comming soon

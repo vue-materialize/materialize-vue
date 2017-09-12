@@ -2,5 +2,7 @@
   "button": "./packages/button/index.js",
   "icon": "./packages/icon/index.js",
   "row": "./packages/row/index.js",
-  "col": "./packages/col/index.js"
+  "col": "./packages/col/index.js",
+  "breadcrumb": "./packages/breadcrumb/index.js",
+  "breadcrumb-item": "./packages/breadcrumb-item/index.js"
 }

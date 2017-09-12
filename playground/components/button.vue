@@ -15,7 +15,7 @@
   export default {
     methods: {
       handleClick () {
-        console.log('ladsmfkldsafjdslkaf')
+        console.log('yeah, click.')
       }
     }
   }

@@ -27,8 +27,8 @@
   import 'vue-md-icons/src/icons/photo' // 图片
   import 'vue-md-icons/src/icons/search' // 搜索
   import 'vue-md-icons/src/icons/delete' // 删除
-  import 'vue-md-icons/src/icons/settings' // 删除
-  import 'vue-md-icons/src/icons/share' // 删除
+  import 'vue-md-icons/src/icons/settings' // 设置
+  import 'vue-md-icons/src/icons/share' // 分享
   import 'vue-md-icons/src/icons/star' // 星星
   import 'vue-md-icons/src/icons/star_half' // 半星
   import 'vue-md-icons/src/icons/star_border' // 空星
