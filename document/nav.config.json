@@ -16,6 +16,10 @@
           {
             "path": "/grid",
             "title": "Grid 栅格系统"
+          },
+          {
+            "path": "/switch",
+            "title": "Switch 开关"
           }
         ]
       }

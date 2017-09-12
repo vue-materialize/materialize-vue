@@ -4,12 +4,14 @@ import Button from '../packages/button/index.js'
 import Icon from '../packages/icon/index.js'
 import Row from '../packages/row/index.js'
 import Col from '../packages/col/index.js'
+import Switch from '../packages/switch/index.js'
 
 const components = [
   Button,
   Icon,
   Row,
-  Col
+  Col,
+  Switch
 ]
 
 const install = function (Vue, opts = {}) {
@@ -32,5 +34,6 @@ export default {
   Button,
   Icon,
   Row,
-  Col
+  Col,
+  Switch
 }
