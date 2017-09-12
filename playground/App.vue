@@ -8,6 +8,7 @@
   import Icon from './components/icon.vue'
   import Row from './components/row.vue'
   import Col from './components/col.vue'
+  import Switch from './components/switch.vue'
   import Breadcrumb from './components/breadcrumb.vue'
   export default {
     components: {
@@ -15,6 +16,7 @@
       IconPlay: Icon,
       RowPlay: Row,
       ColPlay: Col,
+      SwitchPlay: Switch,
       BreadcrumbPlay: Breadcrumb
     }
   }
