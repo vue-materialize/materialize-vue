@@ -17,6 +17,9 @@
 [Breadcrumb 面包屑](http://mvui.savoygu.com/#/breadcrumb
 )
 
+[Input 输入框](http://mvui.savoygu.com/#/input
+)
+
 ...
 
 comming soon

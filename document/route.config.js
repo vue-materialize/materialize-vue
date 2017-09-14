@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/breadcrumb',
+    redirect: '/input',
     component: load('component'),
     children: []
   })

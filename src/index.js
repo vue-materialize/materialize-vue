@@ -7,6 +7,7 @@ import Col from '../packages/col/index.js'
 import Switch from '../packages/switch/index.js'
 import Breadcrumb from '../packages/breadcrumb/index.js'
 import BreadcrumbItem from '../packages/breadcrumb-item/index.js'
+import Input from '../packages/input/index.js'
 
 const components = [
   Button,
@@ -15,7 +16,8 @@ const components = [
   Col,
   Switch,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
+  Input
 ]
 
 const install = function (Vue, opts = {}) {
@@ -41,5 +43,6 @@ export default {
   Col,
   Switch,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
+  Input
 }

@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <breadcrumb-play></breadcrumb-play>
+    <input-play></input-play>
   </div>
 </template>
 <script>
@@ -10,6 +10,7 @@
   import Col from './components/col.vue'
   import Switch from './components/switch.vue'
   import Breadcrumb from './components/breadcrumb.vue'
+  import Input from './components/input.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -17,7 +18,8 @@
       RowPlay: Row,
       ColPlay: Col,
       SwitchPlay: Switch,
-      BreadcrumbPlay: Breadcrumb
+      BreadcrumbPlay: Breadcrumb,
+      InputPlay: Input
     }
   }
 </script>

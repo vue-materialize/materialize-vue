@@ -24,6 +24,10 @@
           {
             "path": "/breadcrumb",
             "title": "Breadcrumb 面包屑"
+          },
+          {
+            "path": "/input",
+            "title": "Input 输入框"
           }
         ]
       }

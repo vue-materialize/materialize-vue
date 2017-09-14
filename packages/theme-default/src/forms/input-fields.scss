@@ -7,6 +7,12 @@
   color: $placeholder-text-color;
 }
 
+#disabled{
+  color: rgba(0,0,0,0.26);
+  border-bottom: 1px dotted rgba(0,0,0,0.26);
+  box-shadow:none;
+}
+
 /* Text inputs */
 
 input:not([type]),

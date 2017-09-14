@@ -77,7 +77,7 @@
 ### Events
 | 事件名称      | 说明    | 回调参数      |
 |---------- |-------- |---------- |
-| input | 在输入框值改变时触发 | (value: string | number) |
+| input | 在输入框值改变时触发 | (value: string 、 number) |
 | change | 在输入框值改变时触发 | (event: Event) |
 | focus | 在输入框获得焦点时触发 | (event: Event) |
 | blur | 在输入框失去焦点时触发 | (event: Event) |
