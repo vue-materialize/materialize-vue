@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/input',
+    redirect: '/chip',
     component: load('component'),
     children: []
   })

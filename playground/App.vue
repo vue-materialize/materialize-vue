@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <input-play></input-play>
+    <chip-play></chip-play>
   </div>
 </template>
 <script>
@@ -11,6 +11,7 @@
   import Switch from './components/switch.vue'
   import Breadcrumb from './components/breadcrumb.vue'
   import Input from './components/input.vue'
+  import Chip from './components/chip.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -19,7 +20,8 @@
       ColPlay: Col,
       SwitchPlay: Switch,
       BreadcrumbPlay: Breadcrumb,
-      InputPlay: Input
+      InputPlay: Input,
+      ChipPlay: Chip
     }
   }
 </script>

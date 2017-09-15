@@ -1,0 +1,46 @@
+.mv-chip {
+  .chips {
+       display: inline-block;
+       height: 32px;
+       font-size: 13px;
+       font-weight: 500;
+       color: rgba(0,0,0,.6);
+       line-height: 32px;
+       padding: 0 12px;
+       border-radius: 16px;
+       background-color: $chip-bg-color;
+       margin-bottom: $chip-margin;
+       margin-right: $chip-margin;
+       > img {
+         float: left;
+         margin: 0 8px 0 -12px;
+         height: 32px;
+         width: 32px;
+         border-radius: 50%;
+       }
+       .close {
+         cursor: pointer;
+         float: right;
+         font-size: 16px;
+         padding-top: 8px;
+         padding-left: 8px;
+       }
+  }
+  .input-field .prefix ~ input{
+    margin-left: 0 !important;
+  }
+  .newChip {
+    display:inline-block;
+    height: 32px !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+
+// 选中样式
+.selectChip{
+  background:#26a69a!important;
+  color:#fff!important;
+}
