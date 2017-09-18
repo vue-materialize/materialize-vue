@@ -1,44 +1,48 @@
 <template>
-  <div class="mv-chip">
-    <div v-for="chip in chips" :key="chip.id" @click="currentIndex = chip.id" v-show="chip.tag !== ''"
-         :class="['chips', {'selectChip': currentIndex != -1 && currentIndex === chip.id && selected}]">
+  <div :class="['mv-chip', 'chips', { 'addBorder': show === true}, {'focus': focus && show === true}]" @click="focus = true, $refs.test.focus()">
+    <div v-for="(chip, index) in chips" :key="index" @click="currentIndex = index"
+         :class="['chip', {'selected': currentIndex != -1 && currentIndex === index && selected}]">
       <img v-if="chip.image" :src=chip.image alt="Contact Person">
       <span>{{chip.tag}}</span>
       <i @click="handleClose(chip)">
         <icon v-if="icon" v-bind="iconAttr" class="close"></icon>
       </i>
     </div>
-    <input-add v-if='show' v-model="inputValue" class="newChip" placeholder="+NewChip" @enter="handleInputConfirm" @blur="handleInputConfirm"></input-add>
+    <input type="text" ref="test" v-if='show' v-model="inputValue" class="input" :placeholder="placeholder" @blur="handleInputConfirm" @keyup.enter="handleInputConfirm">
   </div>
 </template>
 
 <script>
   import Icon from 'packages/icon/src/main.vue'
-  import InputAdd from 'packages/input/src/main.vue'
 
   export default {
     name: 'MvChip',
     componentName: 'MvChip',
     components: {
-      Icon,
-      InputAdd
+      Icon
     },
     data () {
       return {
+        focus: false,
         currentIndex: -1,
-        inputValue: ''
+        inputValue: '',
+        index: ''
       }
     },
     props: {
       chips: {
         type: Array,
         default: function () {
-          return [{tag: '', image: '', id: null}]
+          return []
         }
       },
       selected: Boolean,
       icon: [String, Object],
-      show: Boolean
+      show: Boolean,
+      placeholder: {
+        type: String,
+        default: ''
+      }
     },
     computed: {
       iconAttr () {
@@ -53,6 +57,7 @@
         this.$emit('close', chip)
       },
       handleInputConfirm () {
+        this.focus = false
         let inputValue = this.inputValue.trim()
         if (inputValue) {
           for (var chip in this.chips) {
@@ -60,9 +65,11 @@
               inputValue = ''
             }
           }
-          this.chips.push({
-            tag: inputValue, id: inputValue
-          })
+          if (inputValue !== '') {
+            this.chips.push({
+              tag: inputValue
+            })
+          }
         }
         this.inputValue = ''
       }

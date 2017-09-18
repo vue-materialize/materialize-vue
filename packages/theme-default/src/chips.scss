@@ -1,46 +1,90 @@
-.mv-chip {
-  .chips {
-       display: inline-block;
-       height: 32px;
-       font-size: 13px;
-       font-weight: 500;
-       color: rgba(0,0,0,.6);
-       line-height: 32px;
-       padding: 0 12px;
-       border-radius: 16px;
-       background-color: $chip-bg-color;
-       margin-bottom: $chip-margin;
-       margin-right: $chip-margin;
-       > img {
-         float: left;
-         margin: 0 8px 0 -12px;
-         height: 32px;
-         width: 32px;
-         border-radius: 50%;
-       }
-       .close {
-         cursor: pointer;
-         float: right;
-         font-size: 16px;
-         padding-top: 8px;
-         padding-left: 8px;
-       }
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0,0,0,.6);
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: $chip-bg-color;
+  margin-bottom: $chip-margin;
+  margin-right: $chip-margin;
+
+  > img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
   }
-  .input-field .prefix ~ input{
-    margin-left: 0 !important;
-  }
-  .newChip {
-    display:inline-block;
-    height: 32px !important;
-    &:focus {
-      box-shadow: none !important;
-    }
+
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-left: 8px;
   }
 }
 
+.chips {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  min-height: 45px;
+  outline: none;
+  transition: all .3s;
+  &.addBorder {
+    border-bottom: 1px solid $chip-border-color;
+  }
+  &.focus {
+    border-bottom: 1px solid $chip-selected-color;
+    box-shadow: 0 1px 0 0 $chip-selected-color;
+  }
 
-// 选中样式
-.selectChip{
-  background:#26a69a!important;
-  color:#fff!important;
+  &:hover {
+    cursor: text;
+  }
+
+  .chip.selected {
+    background-color: $chip-selected-color;
+    color: #fff;
+  }
+
+  .input {
+    background: none;
+    border: 0!important;
+    color: rgba(0,0,0,.6);
+    display: inline-block;
+    font-size: $input-font-size;
+    height: $input-height;
+    line-height: 32px;
+    outline: 0;
+    margin: 0!important;
+    padding: 0 !important;
+    width: 120px !important;
+  }
+
+  .input:focus {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  // Autocomplete
+  .autocomplete-content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// Form prefix
+.prefix ~ .chips {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+.chips:empty ~ label  {
+  font-size: 0.8rem;
+  transform: translateY(-140%);
 }
