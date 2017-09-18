@@ -1,15 +1,28 @@
+<script>
+  export default {
+    data () {
+      return {
+        value1: true,
+        value2: true,
+        value4: true
+      }
+    }
+  }
+</script>
+
 ## Switch 开关
 表示两种相互对立的状态间的切换，多用于触发「开/关」。
 ### 基本用法
 
 :::demo 绑定`v-model`到一个`Boolean`类型的变量。可以使用`on-text`属性与`off-text`属性来设置开关的文字描述，使用`on-color`属性与`off-color`属性来设置开关的背景色。
+
 ```html
 <mv-switch v-model="value1"></mv-switch>
 <mv-switch v-model="value2" off-color="#ff4949" on-color="#13ce66"></mv-switch>
 
 <script>
   export default {
-    data() {
+    data () {
       return {
         value1: true,
         value2: true
@@ -22,25 +35,19 @@
 
 ### 禁用状态
 
-:::demo 设置`disabled`属性，接受一个`Boolean`，设置`true`即可禁用。。
+:::demo 设置`disabled`属性，接受一个`Boolean`，设置`true`即可禁用。
+
 ```html
 <mv-switch v-model="value4" disabled></mv-switch>
 <mv-switch v-model="value4" off-color="#ff4949" on-color="#13ce66" disabled></mv-switch>
 
 <script>
   export default {
-    data() {
+    data () {
       return {
-        value4: true,
-        value1: true,
-        value2: true
+        value4: true
       }
-    },
-     methods: {
-       test (res) {
-         console.log(res)
-       }
-     }
+    }
   };
 </script>
 ```

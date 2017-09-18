@@ -9,7 +9,7 @@ var cheerio = require('cheerio')
 
 // 从字符串 str 中移除指定标签
 exports.strip = function (str, tags) {
-  var $ = cheerio.load(str, { decodeEntities: false, useHtmlParser2: true })
+  var $ = cheerio.load(str, { decodeEntities: false })
 
   if (!tags || tags.length === 0) {
     return str

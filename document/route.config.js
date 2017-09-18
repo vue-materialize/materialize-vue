@@ -74,8 +74,6 @@ const generateMiscRoutes = function () {
 
 let route = registerRoute(navConfig)
 
-console.log(route)
-
 // route = route.concat(generateMiscRoutes())
 
 export default route

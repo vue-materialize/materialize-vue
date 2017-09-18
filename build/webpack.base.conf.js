@@ -125,6 +125,7 @@ module.exports = {
         test: /\.md$/,
         loader: 'vue-markdown-loader',
         options: {
+          preventExtract: true,
           use: [
             [require('markdown-it-anchor'), {
               level: 2,
