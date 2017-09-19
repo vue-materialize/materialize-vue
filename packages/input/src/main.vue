@@ -1,13 +1,33 @@
 <template>
   <div class="input-field mv-input">
-    <i :class="['material-icons', 'prefix', isFocus ? 'active' : '']">
-      <icon v-if="icon" v-bind="iconAttr" :class="['material-icons', position]"></icon>
+    <i class="material-icons prefix"
+       :class="[focus ? 'active' : '']"
+       v-if="icon">
+      <icon v-bind="iconAttr" class="material-icons"></icon>
     </i>
-    <input v-if="type !== 'textarea'" :type="type" :value="currentValue" :placeholder="placeholder" :class="['validate', validateSure]"
-           :disabled="disabled"
-           @input="handleInput" @focus="handleFocus" @blur="handleBlur" @keyup.enter="handleEnter">
-    <label for="disabled" :class="{'active': focusType || disabled === true || active }" :data-error="wrongmsg"
-             :data-success="rightmsg">
+    <template v-if="type !== 'textarea'">
+      <input :type="type"
+             :value="currentValue"
+             :placeholder="placeholder"
+             :class="[validate ? 'validate' : '', verifyClass]"
+             :disabled="disabled"
+             @input="handleInput"
+             @focus="handleFocus"
+             @blur="handleBlur"
+             @keyup.enter="handleEnter">
+    </template>
+    <textarea v-else
+              :value="currentValue"
+              :placeholder="placeholder"
+              class="materialize-textarea"
+              :class="[validate ? 'validate' : '', verifyClass]"
+              :disabled="disabled"
+              @input="handleInput"
+              @focus="handleFocus"
+              @blur="handleBlur"></textarea>
+    <label :class="{'active': currentValue || focus || active }"
+           :data-error="errorMessage"
+           :data-success="correctMessage">
       <slot></slot>
     </label>
   </div>
@@ -18,49 +38,48 @@
 
   export default {
     name: 'MvInput',
+
     componentName: 'MvInput',
+
     components: {
       Icon
     },
+
     data () {
       return {
         currentValue: this.value,
-        validateSure: '', // 是否添加验证
-        focusType: false, // 输入状态
-        isFocus: false  // 文本框是否聚焦
+        verifyClass: '', // 验证样式
+        focus: false // 文本框是否聚焦
       }
     },
+
     props: {
       value: [String, Number],
-      placeholder: String,
-      validate: Boolean,
-      active: Boolean,
-      disabled: Boolean,
       type: {
         type: String,
         default: 'text'
       },
-      wrongmsg: {
-        type: String,
-        default: 'wrong'
+      placeholder: String,
+      validate: Boolean,
+      active: Boolean,
+      disabled: Boolean,
+      errorMessage: String,
+      correctMessage: String,
+      regexp: {
+        type: RegExp,
+        default () {
+          return /\w{6,18}/
+        }
       },
-      rightmsg: {
-        type: String,
-        default: 'right'
-      },
-      icon: [String, Object],
-      position: String
+      icon: [String, Object]
     },
+
     watch: {
       'value' (val, oldValue) {
         this.setCurrentValue(val)
       }
     },
-    mounted () {
-      if (this.value) {
-        this.focusType = true
-      }
-    },
+
     computed: {
       iconAttr () {
         return typeof this.icon === 'string'
@@ -68,48 +87,41 @@
           : this.icon
       }
     },
+
     methods: {
       setCurrentValue (value) {
         if (value === this.currentValue) return
         this.currentValue = value
       },
       handleInput (event) {
-        this.isFocus = true
-        this.focusType = true
         const value = event.target.value
         this.$emit('input', value)
         this.setCurrentValue(value)
         this.$emit('change', event)
       },
       handleFocus (event) {
-        this.isFocus = true
-        this.focusType = true
+        this.focus = true
         this.$emit('focus', event)
       },
       handleBlur (event) {
-        this.condition(event)
+        this.focus = false
+        if (this.validate) this.checkField(event)
         this.$emit('blur', event)
       },
       handleEnter (event) {
-        this.condition(event)
+        if (this.validate) this.checkField(event)
         this.$emit('enter', event)
       },
-      condition (event) {  // 失去焦点 回车后的判定
-        this.isFocus = false
-        if (event.target.value.trim()) {
-          this.focusType = true
-          if (this.validate) { // 判定email规则匹配，匹配'valid'，不匹配'invalid'
-            var reg = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-            var result = reg.test(event.target.value)
-            if (result) {
-              this.validateSure = this.type === 'email' ? 'valid' : ''
-            } else {
-              this.validateSure = this.type === 'email' ? 'invalid' : ''
-            }
+      checkField (event) {
+        let value = event.target.value.trim()
+        if (value) {
+          let regexp = this.regexp
+          if (this.type === 'email') {
+            regexp = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
           }
+          this.verifyClass = regexp.test(value) ? 'valid' : 'invalid'
         } else {
-          this.focusType = false
-          this.validateSure = ''
+          this.verifyClass = ''
         }
       }
     }

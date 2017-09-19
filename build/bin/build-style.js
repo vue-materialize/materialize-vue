@@ -6,7 +6,7 @@ var sass = require('gulp-sass')
 var cssmin = require('gulp-cssmin')
 
 gulp.task('compile', function () {
-  return gulp.src('../../packages/theme-default/src/*.scss')
+  return gulp.src('../../packages/theme-default/src/**/!(_)*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cssmin())
     .pipe(gulp.dest('../../packages/theme-default/lib'))

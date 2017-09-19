@@ -76,4 +76,10 @@ let route = registerRoute(navConfig)
 
 // route = route.concat(generateMiscRoutes())
 
+route.push({
+  path: '/play',
+  name: 'play',
+  component: require('../playground/App.vue')
+})
+
 export default route
