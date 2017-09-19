@@ -1,1 +1,0 @@
-.md-icon{display:inline-block;fill:currentColor}.md-flip-normal{transform:scale(1)}.md-flip-horizontal{transform:scaleX(-1)}.md-flip-vertical{transform:scaleY(-1)}.md-spin{animation:md-spin 1s 0s infinite linear}.md-inverse{color:#fff}.md-pulse{animation:md-spin 1s infinite steps(8)}@keyframes md-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
