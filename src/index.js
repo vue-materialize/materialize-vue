@@ -8,6 +8,7 @@ import Switch from '../packages/switch/index.js'
 import Breadcrumb from '../packages/breadcrumb/index.js'
 import BreadcrumbItem from '../packages/breadcrumb-item/index.js'
 import Input from '../packages/input/index.js'
+import Chip from '../packages/chip/index.js'
 
 const components = [
   Button,
@@ -17,7 +18,8 @@ const components = [
   Switch,
   Breadcrumb,
   BreadcrumbItem,
-  Input
+  Input,
+  Chip
 ]
 
 const install = function (Vue, opts = {}) {
@@ -44,5 +46,6 @@ export default {
   Switch,
   Breadcrumb,
   BreadcrumbItem,
-  Input
+  Input,
+  Chip
 }

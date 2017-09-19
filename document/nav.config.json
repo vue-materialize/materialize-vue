@@ -28,6 +28,10 @@
           {
             "path": "/input",
             "title": "Input 输入框"
+          },
+          {
+            "path": "/chip",
+            "title": "Chip 信息块"
           }
         ]
       }
