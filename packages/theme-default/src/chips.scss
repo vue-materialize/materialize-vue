@@ -1,3 +1,18 @@
+@import "color";
+@import "variables";
+
+.mv-chip {
+  display: inline-block;
+  &.chips {
+    display: block;
+  }
+  .mv-icon {
+    height: 1em;
+    margin-top: -4px;
+    vertical-align: middle;
+  }
+}
+
 .chip {
   display: inline-block;
   height: 32px;
@@ -23,7 +38,7 @@
     cursor: pointer;
     float: right;
     font-size: 16px;
-    padding-top: 8px;
+    line-height: 32px;
     padding-left: 8px;
   }
 }
@@ -35,7 +50,7 @@
   min-height: 45px;
   outline: none;
   transition: all .3s;
-  &.addBorder {
+  &.is-bordered {
     border-bottom: 1px solid $chip-border-color;
   }
   &.focus {

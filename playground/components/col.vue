@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-play">
     <mv-row>
       <mv-col :s="1">s1</mv-col>
       <mv-col :s="1">s1</mv-col>
@@ -37,7 +37,7 @@
   export default {}
 </script>
 <style>
-  .col {
+  .col-play .col {
     line-height: 50px;
     font-size: 28px;
     color: white;
