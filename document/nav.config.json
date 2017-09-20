@@ -32,6 +32,10 @@
           {
             "path": "/chip",
             "title": "Chip 信息块"
+          },
+          {
+            "path": "/radio",
+            "title": "Radio 单选框"
           }
         ]
       }

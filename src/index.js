@@ -9,6 +9,8 @@ import Breadcrumb from '../packages/breadcrumb/index.js'
 import BreadcrumbItem from '../packages/breadcrumb-item/index.js'
 import Input from '../packages/input/index.js'
 import Chip from '../packages/chip/index.js'
+import Radio from '../packages/radio/index.js'
+import RadioGroup from '../packages/radio-group/index.js'
 
 const components = [
   Button,
@@ -19,7 +21,9 @@ const components = [
   Breadcrumb,
   BreadcrumbItem,
   Input,
-  Chip
+  Chip,
+  Radio,
+  RadioGroup
 ]
 
 const install = function (Vue, opts = {}) {
@@ -47,5 +51,7 @@ export default {
   Breadcrumb,
   BreadcrumbItem,
   Input,
-  Chip
+  Chip,
+  Radio,
+  RadioGroup
 }

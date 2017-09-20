@@ -7,5 +7,7 @@
   "breadcrumb": "./packages/breadcrumb/index.js",
   "breadcrumb-item": "./packages/breadcrumb-item/index.js",
   "input": "./packages/input/index.js",
-  "chip": "./packages/chip/index.js"
+  "chip": "./packages/chip/index.js",
+  "radio": "./packages/radio/index.js",
+  "radio-group": "./packages/radio-group/index.js"
 }

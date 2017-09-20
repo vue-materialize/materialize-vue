@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/chip',
+    redirect: '/radio',
     component: load('component'),
     children: []
   })

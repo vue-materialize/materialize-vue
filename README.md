@@ -20,6 +20,13 @@
 [Input 输入框](http://mvui.savoygu.com/#/input
 )
 
+[Chip 消息块](http://mvui.savoygu.com/#/chip
+)
+
+[Radio 单选框](http://mvui.savoygu.com/#/radio
+)
+
+
 ...
 
 comming soon
@@ -75,3 +82,6 @@ npm run test:watch
 # lint code 代码语法检查
 npm run lint
 ```
+
+## LICENSE
+MIT
