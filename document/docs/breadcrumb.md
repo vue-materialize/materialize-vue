@@ -13,9 +13,9 @@
         padding: 30px 24px;
         overflow: hidden;
         border-bottom: 1px solid #eff2f6;
-        &:last-child {
-            border-bottom: none;
-        }
+    }
+    .demo-breadcrumb .block:last-child {
+        border-bottom: none;
     }
 </style>
 ## Breadcrumb 面包屑

@@ -39,24 +39,6 @@
   }
 </script>
 
-<style>
-    .demo-radio .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-    .demo-radio .demonstration {
-        display: block;
-        color: #8492a6;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 20px;
-     }
-</style>
-
 ## Radio 单选框
 
 当用户只能从一组项目中只进行一个选择时，使用“单选按钮”。
