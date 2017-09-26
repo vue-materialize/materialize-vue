@@ -11,6 +11,8 @@ import Input from '../packages/input/index.js'
 import Chip from '../packages/chip/index.js'
 import Radio from '../packages/radio/index.js'
 import RadioGroup from '../packages/radio-group/index.js'
+import Checkbox from '../packages/checkbox/index.js'
+import CheckboxGroup from '../packages/checkbox-group/index.js'
 
 const components = [
   Button,
@@ -23,7 +25,9 @@ const components = [
   Input,
   Chip,
   Radio,
-  RadioGroup
+  RadioGroup,
+  Checkbox,
+  CheckboxGroup
 ]
 
 const install = function (Vue, opts = {}) {
@@ -53,5 +57,7 @@ export default {
   Input,
   Chip,
   Radio,
-  RadioGroup
+  RadioGroup,
+  Checkbox,
+  CheckboxGroup
 }
