@@ -19,10 +19,7 @@
       checked: {},
       withGap: Boolean,
       disabled: Boolean,
-      direction: {
-        type: String,
-        default: ''
-      }
+      vertical: Boolean
     },
 
     watch: {
