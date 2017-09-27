@@ -40,6 +40,10 @@
           {
             "path": "/checkbox",
             "title": "Checkbox 多选框"
+          },
+          {
+            "path": "/badge",
+            "title": "Badge 徽章"
           }
         ]
       }

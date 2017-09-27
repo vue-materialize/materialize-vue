@@ -1,14 +1,34 @@
+@import "./color";
+@import "./variables";
+
+.mv-badge {
+  &.badge {
+    &.new {
+      &:after {
+        content: '';
+      }
+    }
+
+    &.right {
+      float: right;
+    }
+
+    &.gap {
+      margin-left: 14px;
+    }
+  }
+}
+
 // Badges
 span.badge {
+  display: inline-block;
   min-width: 3rem;
   padding: 0 6px;
-  margin-left: 14px;
   text-align: center;
   font-size: 1rem;
   line-height: $badge-height;
   height: $badge-height;
   color: color('grey', 'darken-1');
-  float: right;
   box-sizing: border-box;
 
   &.new {
@@ -26,6 +46,7 @@ span.badge {
     content: " " attr(data-badge-caption);
   }
 }
+
 nav ul a span.badge {
   display: inline-block;
   float: none;
@@ -39,9 +60,11 @@ nav ul a span.badge {
 .collection-item span.badge {
   margin-top: calc(#{$collection-line-height / 2} - #{$badge-height / 2});
 }
+
 .collapsible span.badge {
   margin-left: auto;
 }
+
 .side-nav span.badge {
   margin-top: calc(#{$sidenav-line-height / 2} - #{$badge-height / 2});
 }

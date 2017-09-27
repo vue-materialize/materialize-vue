@@ -13,6 +13,7 @@ import Radio from '../packages/radio/index.js'
 import RadioGroup from '../packages/radio-group/index.js'
 import Checkbox from '../packages/checkbox/index.js'
 import CheckboxGroup from '../packages/checkbox-group/index.js'
+import Badge from '../packages/badge/index.js'
 
 const components = [
   Button,
@@ -27,7 +28,8 @@ const components = [
   Radio,
   RadioGroup,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Badge
 ]
 
 const install = function (Vue, opts = {}) {
@@ -59,5 +61,6 @@ export default {
   Radio,
   RadioGroup,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Badge
 }
