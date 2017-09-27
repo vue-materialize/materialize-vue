@@ -1,2 +1,2 @@
-packages/theme-default/**/* linguist-vendored=false
-document/assets/color-brewer.css linguist-language=Vue
+packages/theme-default/**/*.scss linguist-vendored=false
+document/assets/*.css linguist-vendored=false
