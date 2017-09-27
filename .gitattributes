@@ -1,2 +1,2 @@
-packages/theme-default/**/*.scss linguist-vendored=false
-document/assets/*.css linguist-vendored=false
+packages/theme-default/**/*.scss linguist-vendored
+document/assets/*.css linguist-vendored
