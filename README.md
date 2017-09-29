@@ -26,6 +26,11 @@
 [Radio 单选框](http://mvui.savoygu.com/#/radio
 )
 
+[Checkbox 多选框](http://mvui.savoygu.com/#/checkbox
+)
+
+[Badge 徽章](http://mvui.savoygu.com/#/badge
+)
 
 ...
 

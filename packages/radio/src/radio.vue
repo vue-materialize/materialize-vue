@@ -1,7 +1,7 @@
 <template>
   <div class="mv-radio"
        :class="{
-          'mv-radio--inline': inline === 'horizontal'
+          'mv-radio--inline': !isVertical
        }">
     <input type="radio"
            :id="id || $slots.default[0].text"
@@ -40,10 +40,7 @@
       withGap: Boolean,
       name: String,
       disabled: Boolean,
-      direction: {
-        type: String,
-        default: 'horizontal'
-      }
+      vertical: Boolean
     },
 
     computed: {
@@ -74,10 +71,10 @@
         }
       },
 
-      inline () {
+      isVertical () {
         return this.isGroup
-            ? this._radioGroup.direction || this.direction
-            : this.direction
+            ? this._radioGroup.vertical || this.vertical
+            : this.vertical
       },
 
       isWithGap () {

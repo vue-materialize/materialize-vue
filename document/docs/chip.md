@@ -8,6 +8,13 @@ export default {
             chipGroup3: [{tag:'信息一'},{tag:'信息二'}, {tag:'信息三'},{tag:'信息四'}],
             chipGroup4: [{tag:'标签一'},{tag:'标签二'},{tag:'标签三'}, {tag:'标签四'}]
         }
+    },
+    mounted () {
+      this.$nextTick(_ => {
+        let demos = document.querySelectorAll('.source')
+        demos[1].style.padding = '0'
+        demos[2].style.padding = '0'
+      })
     }
 }
 </script>
@@ -17,9 +24,9 @@ export default {
         padding: 30px 24px;
         overflow: hidden;
         border-bottom: 1px solid #eff2f6;
-        &:last-child {
-            border-bottom: none;
-        }
+    }
+    .demo-chip .block:last-child {
+        border-bottom: none;
     }
     .demo-chip .demonstration {
         display: block;

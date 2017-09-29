@@ -6,12 +6,12 @@
         disabled: 'chooseDisabled',
         withGap: 'chooseGap',
         gaps: ['gap', 'chooseGap', 'disabledGap', 'chooseDisabledGap'],
-        direction: 'horizontal',
+        direction: false,
         radioGroup: 'banana',
         rgTimer: null,
         rgDisabled: false,
         rgWithGap: false,
-        rgDirection: 'horizontal',
+        rgDirection: false,
         radioGroups: ['banana', 'apple', 'orange']
       }
     },
@@ -39,24 +39,6 @@
   }
 </script>
 
-<style>
-    .demo-radio .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-    .demo-radio .demonstration {
-        display: block;
-        color: #8492a6;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 20px;
-     }
-</style>
-
 ## Radio 单选框
 
 当用户只能从一组项目中只进行一个选择时，使用“单选按钮”。
@@ -73,7 +55,9 @@
 <script>
   export default {
     data () {
-      radio: true
+      return {
+        radio: true
+      }
     }
   }
 </script>
@@ -92,7 +76,9 @@
 <script>
   export default {
     data () {
-      disabled: 'chooseDisabled'
+      return {
+        disabled: 'chooseDisabled'
+      }
     }
   }
 </script>
@@ -113,8 +99,10 @@
 <script>
   export default {
     data () {
-      withGap: 'chooseGap',
-      gaps: ['gap', 'chooseGap', 'disabledGap', 'chooseDisabledGap']
+      return {
+        withGap: 'chooseGap',
+        gaps: ['gap', 'chooseGap', 'disabledGap', 'chooseDisabledGap']
+      }
     },
     methods: {
        chooseNext () {
@@ -130,17 +118,19 @@
 
 ### 排列方向
 
-:::demo 通过为 `mv-radio`组件 设置 `direction` 属性，改变的单选按钮排列方向，默认是 `horizontal` 水平排列，可选值为 `vertical`垂直排列。
+:::demo 通过为 `mv-radio`组件 设置 `vertical` 属性，改变的单选按钮排列方向，默认是水平排列，它接受一个 `boolean`，`true` 为垂直排列。
 ```html
 当前选中值：{{direction}}
-<p><mv-button @click="direction = direction === 'horizontal' ? 'vertical' : 'horizontal'">切换</mv-button></p>
-<mv-radio v-model="direction" value="horizontal" :direction="direction" id="horizontal">{{direction==='horizontal'?'水平排列':'垂直排列'}}</mv-radio>
-<mv-radio v-model="direction" value="vertical" :direction="direction" id="vertical">{{direction==='horizontal'?'水平排列':'垂直排列'}}</mv-radio>
+<p><mv-button @click="direction = !direction">切换</mv-button></p>
+<mv-radio v-model="direction" value="horizontal" :vertical="direction" id="horizontal">{{!direction?'水平排列':'垂直排列'}}</mv-radio>
+<mv-radio v-model="direction" value="vertical" :vertical="direction" id="vertical">{{!direction?'水平排列':'垂直排列'}}</mv-radio>
 
 <script>
   export default {
     data () {
-      direction: 'horizontal'
+      return {
+        direction: false
+      }
     }
   }
 </script>
@@ -160,9 +150,9 @@
   <mv-button v-show="rgTimer" @click="shutdownSwitch">暂停循环</mv-button>
   <mv-button @click="rgDisabled = !rgDisabled">{{!rgDisabled ? '禁用' : '启用'}}</mv-button>
   <mv-button @click="rgWithGap = !rgWithGap">{{!rgWithGap ? '带间隙' : '实心'}}</mv-button>
-  <mv-button @click="rgDirection = rgDirection === 'horizontal' ? 'vertical' : 'horizontal'">{{rgDirection!=='horizontal' ? '水平' : '垂直'}}</mv-button>
+  <mv-button @click="rgDirection = !rgDirection">{{!rgDirection ? '垂直' : '水平'}}</mv-button>
 </p>
-<mv-radio-group v-model="radioGroup" :disabled="rgDisabled" :with-gap="rgWithGap" :direction="rgDirection">
+<mv-radio-group v-model="radioGroup" :disabled="rgDisabled" :with-gap="rgWithGap" :vertical="rgDirection">
   <mv-radio value="banana">香蕉</mv-radio>
   <mv-radio value="apple">苹果</mv-radio>
   <mv-radio value="orange">橘子</mv-radio>
@@ -176,7 +166,7 @@
         rgTimer: null,
         rgDisabled: false,
         rgWithGap: false,
-        rgDirection: 'horizontal',
+        rgDirection: false,
         radioGroups: ['banana', 'apple', 'orange']
       }
     },
@@ -200,3 +190,25 @@
 </script>
 ```
 :::
+
+### Radio Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| value | Radio 的 value 属性对应的值 | string, number, boolean | — | — |
+| id | 原声 id 属性 | string, number | — | — |
+| disabled | 禁用单选框 | boolean | — | false |
+| vertical | 是否垂直排列 | boolean | — | false |
+| with-gap | 选中时单选框是否带间隙 | boolean | — | false |
+| name | 原生 name 属性 | string | — | — |
+
+### Radio-group Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| disabled | 禁用单选框 | boolean | — | false |
+| vertical | 是否垂直排列 | boolean | — | false |
+| with-gap | 选中时单选框是否带间隙 | boolean | — | false |
+
+### Radio-group Events
+| 事件名称      | 说明    | 回调参数      |
+|---------- |-------- |---------- |
+| change | 当绑定值变化时触发的事件 | 选中的单选框的值 |

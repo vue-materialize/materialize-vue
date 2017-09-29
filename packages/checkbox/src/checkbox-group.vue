@@ -1,14 +1,14 @@
 <template>
-  <div class="mv-radio-group">
+  <div class="mv-checkbox-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'MvRadioGroup',
+    name: 'MvCheckboxGroup',
 
-    componentName: 'MvRadioGroup',
+    componentName: 'MvCheckboxGroup',
 
     model: {
       prop: 'checked',
@@ -17,14 +17,16 @@
 
     props: {
       checked: {},
-      withGap: Boolean,
+      filled: Boolean,
       disabled: Boolean,
-      vertical: Boolean
+      vertical: Boolean,
+      min: Number,
+      max: Number
     },
 
     watch: {
-      checked (value) {
-        this.$emit('change', value)
+      checked (val) {
+        this.$emit('change', val)
       }
     }
   }

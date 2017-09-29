@@ -9,5 +9,8 @@
   "input": "./packages/input/index.js",
   "chip": "./packages/chip/index.js",
   "radio": "./packages/radio/index.js",
-  "radio-group": "./packages/radio-group/index.js"
+  "radio-group": "./packages/radio-group/index.js",
+  "checkbox": "./packages/checkbox/index.js",
+  "checkbox-group": "./packages/checkbox-group/index.js",
+  "badge": "./packages/badge/index.js"
 }

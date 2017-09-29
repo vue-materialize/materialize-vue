@@ -25,12 +25,12 @@
         float: left;
         width: 50%;
         box-sizing: border-box;
-        &:nth-child(2n) {
-          border-right: none;
-        }
-        &:nth-last-child(2), &:nth-last-child(1) {
-          border-bottom: none;
-        }
+    }
+    .demo-icon .block:nth-child(2n) {
+        border-right: none;
+    }
+    .demo-icon .block:nth-last-child(1) {
+        border-bottom: none;
     }
     .demo-icon .demonstration {
         display: block;

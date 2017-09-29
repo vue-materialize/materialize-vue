@@ -1,0 +1,2 @@
+packages/theme-default/**/*.scss linguist-vendored
+document/assets/*.css linguist-vendored

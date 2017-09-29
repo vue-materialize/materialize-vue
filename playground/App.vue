@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <radio-play></radio-play>
+    <badge-play></badge-play>
   </div>
 </template>
 <script>
@@ -14,6 +14,10 @@
   import Input from './components/input.vue'
   import Chip from './components/chip.vue'
   import Radio from './components/radio.vue'
+  import RadioGroup from './components/radio-group.vue'
+  import Checkbox from './components/checkbox.vue'
+  import CheckboxGroup from './components/checkbox-group.vue'
+  import Badge from './components/badge.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -25,7 +29,11 @@
       BreadcrumbItemPlay: BreadcrumbItem,
       InputPlay: Input,
       ChipPlay: Chip,
-      RadioPlay: Radio
+      RadioPlay: Radio,
+      RadioGroupPlay: RadioGroup,
+      CheckboxPlay: Checkbox,
+      CheckboxGroupPlay: CheckboxGroup,
+      BadgePlay: Badge
     }
   }
 </script>
