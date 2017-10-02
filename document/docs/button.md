@@ -21,6 +21,7 @@
 ```html
 <mv-button icon="add" floating></mv-button>
 <mv-button icon="add" floating type="red"></mv-button>
+<mv-button icon="add" floating type="red" size="large"></mv-button>
 ```
 :::
 

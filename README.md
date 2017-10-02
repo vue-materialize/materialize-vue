@@ -32,6 +32,9 @@
 [Badge 徽章](http://mvui.savoygu.com/#/badge
 )
 
+[Card 卡片](http://mvui.savoygu.com/#/card
+)
+
 ...
 
 comming soon

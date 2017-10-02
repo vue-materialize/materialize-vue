@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/checkbox',
+    redirect: '/card',
     component: load('component'),
     children: []
   })

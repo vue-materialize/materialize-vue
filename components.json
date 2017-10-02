@@ -12,5 +12,6 @@
   "radio-group": "./packages/radio-group/index.js",
   "checkbox": "./packages/checkbox/index.js",
   "checkbox-group": "./packages/checkbox-group/index.js",
-  "badge": "./packages/badge/index.js"
+  "badge": "./packages/badge/index.js",
+  "card": "./packages/card/index.js"
 }
