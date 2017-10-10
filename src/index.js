@@ -14,6 +14,9 @@ import RadioGroup from '../packages/radio-group/index.js'
 import Checkbox from '../packages/checkbox/index.js'
 import CheckboxGroup from '../packages/checkbox-group/index.js'
 import Badge from '../packages/badge/index.js'
+import Select from '../packages/select/index.js'
+import Option from '../packages/option/index.js'
+import OptionGroup from '../packages/option-group/index.js'
 import Card from '../packages/card/index.js'
 
 const components = [
@@ -31,6 +34,9 @@ const components = [
   Checkbox,
   CheckboxGroup,
   Badge,
+  Select,
+  Option,
+  OptionGroup,
   Card
 ]
 
@@ -65,5 +71,8 @@ export default {
   Checkbox,
   CheckboxGroup,
   Badge,
+  Select,
+  Option,
+  OptionGroup,
   Card
 }
