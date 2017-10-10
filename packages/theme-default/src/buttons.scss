@@ -15,14 +15,6 @@
       margin-right: 15px;
     }
   }
-  &.btn-large {
-    .mv-icon {
-      width: auto;
-      height: 1.6em;
-      vertical-align: top;
-      margin-top: calc(22px - .5em);
-    }
-  }
   &.is-loading {
     cursor: default;
     box-shadow: none;
@@ -31,6 +23,14 @@
   &.btn-floating {
     .mv-icon {
       margin-top: calc(17px - .5em);
+    }
+  }
+  &.btn-large {
+    .mv-icon {
+      width: auto;
+      height: 1.6em;
+      vertical-align: top;
+      margin-top: calc(22px - .5em);
     }
   }
 }

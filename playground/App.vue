@@ -19,6 +19,7 @@
   import CheckboxGroup from './components/checkbox-group.vue'
   import Badge from './components/badge.vue'
   import Select from './components/select.vue'
+  import Card from './components/card.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -35,7 +36,8 @@
       CheckboxPlay: Checkbox,
       CheckboxGroupPlay: CheckboxGroup,
       BadgePlay: Badge,
-      SelectPlay: Select
+      SelectPlay: Select,
+      CardPlay: Card
     }
   }
 </script>

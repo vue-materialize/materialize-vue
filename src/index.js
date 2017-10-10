@@ -17,6 +17,7 @@ import Badge from '../packages/badge/index.js'
 import Select from '../packages/select/index.js'
 import Option from '../packages/option/index.js'
 import OptionGroup from '../packages/option-group/index.js'
+import Card from '../packages/card/index.js'
 
 const components = [
   Button,
@@ -35,7 +36,8 @@ const components = [
   Badge,
   Select,
   Option,
-  OptionGroup
+  OptionGroup,
+  Card
 ]
 
 const install = function (Vue, opts = {}) {
@@ -71,5 +73,6 @@ export default {
   Badge,
   Select,
   Option,
-  OptionGroup
+  OptionGroup,
+  Card
 }

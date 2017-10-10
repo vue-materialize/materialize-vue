@@ -15,5 +15,6 @@
   "badge": "./packages/badge/index.js",
   "select": "./packages/select/index.js",
   "option": "./packages/option/index.js",
-  "option-group": "./packages/option-group/index.js"
+  "option-group": "./packages/option-group/index.js",
+  "card": "./packages/card/index.js"
 }

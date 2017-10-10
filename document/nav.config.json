@@ -48,6 +48,10 @@
           {
             "path": "/select",
             "title": "Select 下拉列表"
+          },
+          {
+            "path": "/card",
+            "title": "Card 卡片"
           }
         ]
       }
