@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <badge-play></badge-play>
+    <select-play></select-play>
   </div>
 </template>
 <script>
@@ -18,6 +18,7 @@
   import Checkbox from './components/checkbox.vue'
   import CheckboxGroup from './components/checkbox-group.vue'
   import Badge from './components/badge.vue'
+  import Select from './components/select.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -33,7 +34,8 @@
       RadioGroupPlay: RadioGroup,
       CheckboxPlay: Checkbox,
       CheckboxGroupPlay: CheckboxGroup,
-      BadgePlay: Badge
+      BadgePlay: Badge,
+      SelectPlay: Select
     }
   }
 </script>

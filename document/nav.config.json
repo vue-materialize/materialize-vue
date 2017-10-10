@@ -44,6 +44,10 @@
           {
             "path": "/badge",
             "title": "Badge 徽章"
+          },
+          {
+            "path": "/select",
+            "title": "Select 下拉列表"
           }
         ]
       }
