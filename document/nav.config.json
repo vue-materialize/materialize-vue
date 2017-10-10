@@ -48,6 +48,10 @@
           {
             "path": "/card",
             "title": "Card 卡片"
+          },
+          {
+            "path": "/pagination",
+            "title": "Pagination 分页"
           }
         ]
       }

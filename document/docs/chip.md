@@ -161,13 +161,13 @@ Chips可以用来表示小的信息块。它们是最常用的用于联系人或
 ### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| chips | 设置信息块数据 | array | - | [{ tag: '', image: ''}] |
-| editable | 是否添加新的信息块 | boolean | - | false |
-| selected | 是否添加选中的信息块样式 | boolean | - | false |
-| placeholder | 设置信息块添加的提示文字 | string | - | - |
-| icon | 设置信息块关闭图标 | string/object | - | close |
-| closable | 是否可关闭 | boolean | - | false |
-| repeatable | 是否可重复 | boolean | - | false |
+| chips | 设置信息块数据 | array | — | [{ tag: '', image: ''}] |
+| editable | 是否添加新的信息块 | boolean | — | false |
+| selected | 是否添加选中的信息块样式 | boolean | — | false |
+| placeholder | 设置信息块添加的提示文字 | string | — | — |
+| icon | 设置信息块关闭图标 | string/object | — | close |
+| closable | 是否可关闭 | boolean | — | false |
+| repeatable | 是否可重复 | boolean | — | false |
 
 ### Events
 | 事件名称      | 说明    | 回调参数      |

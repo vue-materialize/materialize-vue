@@ -79,13 +79,13 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | type | 输入框类型 | string | [text,password,email,textarea] | text |
-| placeholder | 输入框添加默认提示 | string | — | - |
-| value | 输入框添加绑定值 | string, number | — | - |
-| active | label是否展示在输入框上方 | boolean | - | false |
+| placeholder | 输入框添加默认提示 | string | — | — |
+| value | 输入框添加绑定值 | string, number | — | — |
+| active | label是否展示在输入框上方 | boolean | — | false |
 | disabled | 是否禁用输入框 | boolean | — | false |
 | validate | 是否添加验证 | boolean | — | false |
-| error-message | 格式错误时提示信息 (只对 `validate="true"` 有效) | string | - | - |
-| correct-message | 格式正确时提示信息 (只对 `validate="true"` 有效) | string | — | - |
+| error-message | 格式错误时提示信息 (只对 `validate="true"` 有效) | string | — | — |
+| correct-message | 格式正确时提示信息 (只对 `validate="true"` 有效) | string | — | — |
 | regexp | 验证正则表达式 (只对 `validate="true"` 有效) | regexp | — | /\w{6, 18}/ |
 | icon | 带图标，Icon 组件中的图标名 | string/object | — | — |
 

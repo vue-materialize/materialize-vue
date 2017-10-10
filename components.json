@@ -13,5 +13,6 @@
   "checkbox": "./packages/checkbox/index.js",
   "checkbox-group": "./packages/checkbox-group/index.js",
   "badge": "./packages/badge/index.js",
-  "card": "./packages/card/index.js"
+  "card": "./packages/card/index.js",
+  "pagination": "./packages/pagination/index.js"
 }

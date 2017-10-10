@@ -40,7 +40,7 @@
           }
           if (this.checkedGroup.length === 0) {
             plus = true
-            minus = false         
+            minus = false
           }
          }, 500)
        },
@@ -65,7 +65,7 @@
 </script>
 ## Checkbox 多选框
 
-当用户只能从一组项目中只进行一个选择时，使用“多选框”。 
+当用户只能从一组项目中只进行一个选择时，使用“多选框”。
 
 ### 基础用法
 
@@ -206,7 +206,7 @@
           }
           if (this.checkedGroup.length === 0) {
             plus = true
-            minus = false         
+            minus = false
           }
         }, 500)
       },
@@ -277,7 +277,7 @@
     data () {
       return {
         checkboxCompanies: ['百度', '腾讯', '阿里'],
-        checkedCompanies: ['阿里']  
+        checkedCompanies: ['阿里']
       }
     }
   }
@@ -289,22 +289,22 @@
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | value | 选中状态的值（只有在checkbox-group或者绑定对象类型为array时有效） | string | — | — |
-| true-value | 动态绑定选中时的值 | string, number | — | - |
-| false-value | 动态绑定未选中时的值 | string, number | — | - |
-| id | 原声 id 属性 | string, number | - | - |
+| true-value | 动态绑定选中时的值 | string, number | — | — |
+| false-value | 动态绑定未选中时的值 | string, number | — | — |
+| id | 原声 id 属性 | string, number | — | — |
 | disabled | 禁用多选框 | boolean | — | false |
 | vertical | 是否垂直排列 | boolean | — | false |
-| filled | 是否选中时填充多选框 | boolean | - | false |
-| indeterminate | 设置 indeterminate 状态，只负责样式控制 | boolean | - | false |
+| filled | 是否选中时填充多选框 | boolean | — | false |
+| indeterminate | 设置 indeterminate 状态，只负责样式控制 | boolean | — | false |
 
 ### Checkbox-group Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
 | disabled | 禁用多选框 | boolean | — | false |
 | vertical | 是否垂直排列 | boolean | — | false |
-| filled | 是否选中时填充多选框 | boolean | - | false |
-| min | 可被勾选的 checkbox 的最小数量 | number | - | - |
-| max | 可被勾选的 checkbox 的最大数量 | number | - | - |
+| filled | 是否选中时填充多选框 | boolean | — | false |
+| min | 可被勾选的 checkbox 的最小数量 | number | — | — |
+| max | 可被勾选的 checkbox 的最大数量 | number | — | — |
 
 ### Checkbox Events
 | 事件名称      | 说明    | 回调参数      |
