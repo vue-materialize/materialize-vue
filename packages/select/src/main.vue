@@ -12,9 +12,7 @@
                ref="mvSelect"
         >
         <transition
-          name="mv-top"
-          @before-enter="handleMenuEnter"
-          @after-leave="doDestroy">
+          name="mv-top">
           <ul id="select-options"
               class="dropdown-content select-dropdown"
               :class="{'mv-select__multiple': multiple}"
