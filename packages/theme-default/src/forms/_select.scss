@@ -1,9 +1,59 @@
 /* Select Field
    ========================================================================== */
-
+.mv-select{
+  .select-wrapper {
+    .dropdown-content{
+      display:block;
+      opacity: 1;
+      width:100%;
+    }
+  }
+  .mv-select__multiple {
+    li {
+      & > span {
+        padding: 0;
+      }
+    }
+    .mv-checkbox {
+      position: relative;
+      [type="checkbox"] {
+        & + label {
+          top: 0;
+          width: 100%;
+          padding-left: 51px;
+          min-height: 50px;
+          line-height: 50px;
+          transform: translateY(0);
+          pointer-events: all;
+          color:$dropdown-color;
+          &:before {
+            margin-left: 16px;
+            top: 14px;
+          }
+        }
+        &:checked {
+          & + label {
+            &:before {
+              top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mv-top-enter-active {
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: center top;
+  }
+  .mv-top-enter {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
 select { display: none; }
 select.browser-default { display: block; }
-
 select {
   background-color: $select-background;
   width: 100%;
@@ -128,7 +178,14 @@ select:disabled {
   color: $select-disabled-color;
   background-color: transparent;
 }
-
+.select-dropdown .optgroup-wrap {
+  & li{
+    padding-left: 1rem;
+  }
+  & li.optgroup{
+    padding-left: 0px;
+  }
+}
 .select-dropdown.dropdown-content {
   li {
     &.active {
