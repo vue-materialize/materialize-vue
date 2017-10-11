@@ -67,12 +67,6 @@ export default {
        value5: '',
        placeholder: '请选择'
     }
-  },
-  methods: {
-      handleChange(res) {
-        console.log(res)
-        console.log('ceshisss')
-      }
   }
 }
 </script>
