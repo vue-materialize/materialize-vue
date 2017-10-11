@@ -12,7 +12,8 @@
                ref="mvSelect"
         >
         <transition
-          name="mv-top">
+          name="mv-top"
+          @before-enter="handleMenuEnter">
           <ul id="select-options"
               class="dropdown-content select-dropdown"
               :class="{'mv-select__multiple': multiple}"
@@ -186,6 +187,7 @@
         return result
       }
     },
+    computed: {},
     mounted () {
       this.setSelected()
     },
