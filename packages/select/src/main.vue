@@ -170,8 +170,6 @@
       handleMenuEnter (el) {
         el.style.top = 0
       },
-      doDestroy (el) {
-      },
       getValueByPath (object, prop) {
         prop = prop || ''
         const paths = prop.split('.')
@@ -190,7 +188,6 @@
         return result
       }
     },
-    computed: {},
     mounted () {
       this.setSelected()
     },
