@@ -16,6 +16,8 @@ import CheckboxGroup from '../packages/checkbox-group/index.js'
 import Badge from '../packages/badge/index.js'
 import Card from '../packages/card/index.js'
 import Pagination from '../packages/pagination/index.js'
+import Tabs from '../packages/tabs/index.js'
+import TabPane from '../packages/tab-pane/index.js'
 
 const components = [
   Button,
@@ -33,7 +35,9 @@ const components = [
   CheckboxGroup,
   Badge,
   Card,
-  Pagination
+  Pagination,
+  Tabs,
+  TabPane
 ]
 
 const install = function (Vue, opts = {}) {
@@ -68,5 +72,7 @@ export default {
   CheckboxGroup,
   Badge,
   Card,
-  Pagination
+  Pagination,
+  Tabs,
+  TabPane
 }

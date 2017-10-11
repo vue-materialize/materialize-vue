@@ -1,22 +1,22 @@
 <script>
-    export default {
-        mounted () {
-            this.$nextTick(_ => {
-                let firstDemo = document.querySelector('.source')
-                firstDemo.style.padding = '0'
-            })
-        }
+  export default {
+    mounted () {
+      this.$nextTick(_ => {
+          let firstDemo = document.querySelector('.source')
+          firstDemo.style.padding = '0'
+      })
     }
+  }
 </script>
 <style>
-    .demo-breadcrumb .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-    }
-    .demo-breadcrumb .block:last-child {
-        border-bottom: none;
-    }
+  .demo-breadcrumb .block {
+    padding: 30px 24px;
+    overflow: hidden;
+    border-bottom: 1px solid #eff2f6;
+  }
+  .demo-breadcrumb .block:last-child {
+    border-bottom: none;
+  }
 </style>
 ## Breadcrumb 面包屑
 

@@ -1,12 +1,12 @@
 <style>
 .grid-example {
-    margin: 7px 0;
-    line-height: 50px;
-    font-size: 14px;
-    color: white;
-    text-align: center;
-    background-color: tomato;
-    border: 1px solid #eee;
+  margin: 7px 0;
+  line-height: 50px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  background-color: tomato;
+  border: 1px solid #eee;
 }
 </style>
 ## Grid 栅格系统

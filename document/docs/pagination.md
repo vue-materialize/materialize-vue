@@ -93,10 +93,10 @@
 ### Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| currentPage | 当前页 | number | — | — |
-| pageCount | 总页数 | number | — | — |
-| pageRange | 中间页码个数 | number | — | 5 |
-| edgePages | 边缘页码个数 | number | — | 1 |
+| current-page | 当前页 | number | — | — |
+| page-count | 总页数 | number | — | — |
+| page-range | 中间页码个数 | number | — | 5 |
+| edge-pages | 边缘页码个数 | number | — | 1 |
 
 ### Events
 | 事件名称      | 说明    | 回调参数      |

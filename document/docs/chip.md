@@ -1,5 +1,5 @@
 <script>
-export default {
+  export default {
     data () {
         return {
             chipGroup0: {tag:'联系人Chip标签', image: require('../../document/assets/user.jpg')},
@@ -16,25 +16,25 @@ export default {
         demos[2].style.padding = '0'
       })
     }
-}
+  }
 </script>
 
 <style>
-    .demo-chip .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-    }
-    .demo-chip .block:last-child {
-        border-bottom: none;
-    }
-    .demo-chip .demonstration {
-        display: block;
-        color: #8492a6;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 20px;
-     }
+  .demo-chip .block {
+    padding: 30px 24px;
+    overflow: hidden;
+    border-bottom: 1px solid #eff2f6;
+  }
+  .demo-chip .block:last-child {
+    border-bottom: none;
+  }
+  .demo-chip .demonstration {
+    display: block;
+    color: #8492a6;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 </style>
 
 ## Chip 消息块
