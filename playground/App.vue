@@ -1,6 +1,5 @@
 <template>
   <div style="margin: 20px;">
-    <select-play></select-play>
   </div>
 </template>
 <script>
@@ -20,6 +19,7 @@
   import Badge from './components/badge.vue'
   import Select from './components/select.vue'
   import Card from './components/card.vue'
+  import Pagination from './components/pagination.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -37,7 +37,8 @@
       CheckboxGroupPlay: CheckboxGroup,
       BadgePlay: Badge,
       SelectPlay: Select,
-      CardPlay: Card
+      CardPlay: Card,
+      PaginationPlay: Pagination
     }
   }
 </script>

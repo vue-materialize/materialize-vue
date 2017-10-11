@@ -35,6 +35,9 @@
 [Card 卡片](http://mvui.savoygu.com/#/card
 )
 
+[Pagination 分页](http://mvui.savoygu.com/#/pagination
+)
+
 ...
 
 comming soon

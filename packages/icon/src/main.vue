@@ -4,6 +4,10 @@
 
 <script>
   import Icon from 'vue-md-icons/src/components/Icon'
+  import 'vue-md-icons/src/icons/chevron_left' // 左方向
+  import 'vue-md-icons/src/icons/chevron_right' // 左方向
+  import 'vue-md-icons/src/icons/fast_forward' // 快进
+  import 'vue-md-icons/src/icons/fast_rewind' // 快退
   import 'vue-md-icons/src/icons/keyboard_arrow_down' // 下箭头
   import 'vue-md-icons/src/icons/keyboard_arrow_left' // 左箭头
   import 'vue-md-icons/src/icons/keyboard_arrow_right' // 右箭头

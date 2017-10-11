@@ -18,6 +18,7 @@ import Select from '../packages/select/index.js'
 import Option from '../packages/option/index.js'
 import OptionGroup from '../packages/option-group/index.js'
 import Card from '../packages/card/index.js'
+import Pagination from '../packages/pagination/index.js'
 
 const components = [
   Button,
@@ -37,7 +38,8 @@ const components = [
   Select,
   Option,
   OptionGroup,
-  Card
+  Card,
+  Pagination
 ]
 
 const install = function (Vue, opts = {}) {
@@ -74,5 +76,6 @@ export default {
   Select,
   Option,
   OptionGroup,
-  Card
+  Card,
+  Pagination
 }
