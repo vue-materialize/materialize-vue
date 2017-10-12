@@ -18,6 +18,7 @@
   import Checkbox from './components/checkbox.vue'
   import CheckboxGroup from './components/checkbox-group.vue'
   import Badge from './components/badge.vue'
+  import Select from './components/select.vue'
   import Card from './components/card.vue'
   import Pagination from './components/pagination.vue'
   import Tabs from './components/tabs.vue'
@@ -38,6 +39,7 @@
       CheckboxPlay: Checkbox,
       CheckboxGroupPlay: CheckboxGroup,
       BadgePlay: Badge,
+      SelectPlay: Select,
       CardPlay: Card,
       PaginationPlay: Pagination,
       TabsPlay: Tabs,
