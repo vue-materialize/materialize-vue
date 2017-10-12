@@ -1,43 +1,43 @@
 <script>
-    export default {
-        mounted () {
-            this.$nextTick(_ => {
-                let firstDemo = document.querySelector('.source')
-                firstDemo.style.padding = '0'
-                let blocks = document.querySelectorAll('.source .block')
-                let maxHeight = 0
-                for (let i = 0, len = blocks.length; i < len; i++) {
-                    maxHeight = Math.max(maxHeight, blocks[i].clientHeight)
-                }
-                [].slice.call(blocks, 0).forEach(block => {
-                    block.style.height = maxHeight + 'px'
-                })
-            })
+  export default {
+    mounted () {
+      this.$nextTick(_ => {
+        let firstDemo = document.querySelector('.source')
+        firstDemo.style.padding = '0'
+        let blocks = document.querySelectorAll('.source .block')
+        let maxHeight = 0
+        for (let i = 0, len = blocks.length; i < len; i++) {
+            maxHeight = Math.max(maxHeight, blocks[i].clientHeight)
         }
+        [].slice.call(blocks, 0).forEach(block => {
+            block.style.height = maxHeight + 'px'
+        })
+      })
     }
+  }
 </script>
 <style>
-    .demo-icon .block{
-        padding: 30px 0;
-        text-align: center;
-        border-right: solid 1px #EFF2F6;
-        border-bottom: solid 1px #EFF2F6;
-        float: left;
-        width: 50%;
-        box-sizing: border-box;
-    }
-    .demo-icon .block:nth-child(2n) {
-        border-right: none;
-    }
-    .demo-icon .block:nth-last-child(1) {
-        border-bottom: none;
-    }
-    .demo-icon .demonstration {
-        display: block;
-        color: #8492a6;
-        font-size: 14px;
-        margin-bottom: 20px;
-     }
+  .demo-icon .block{
+    padding: 30px 0;
+    text-align: center;
+    border-right: solid 1px #EFF2F6;
+    border-bottom: solid 1px #EFF2F6;
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .demo-icon .block:nth-child(2n) {
+    border-right: none;
+  }
+  .demo-icon .block:nth-last-child(1) {
+    border-bottom: none;
+  }
+  .demo-icon .demonstration {
+    display: block;
+    color: #8492a6;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 </style>
 ## Icon 图标
 

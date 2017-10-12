@@ -56,6 +56,10 @@
           {
             "path": "/pagination",
             "title": "Pagination 分页"
+          },
+          {
+            "path": "/tabs",
+            "title": "Tabs 标签页"
           }
         ]
       }

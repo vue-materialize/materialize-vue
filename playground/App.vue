@@ -1,5 +1,6 @@
 <template>
   <div style="margin: 20px;">
+    <tabs-play></tabs-play>
   </div>
 </template>
 <script>
@@ -20,6 +21,8 @@
   import Select from './components/select.vue'
   import Card from './components/card.vue'
   import Pagination from './components/pagination.vue'
+  import Tabs from './components/tabs.vue'
+  import TabPane from './components/tab-pane.vue'
   export default {
     components: {
       ButtonPlay: Button,
@@ -38,7 +41,9 @@
       BadgePlay: Badge,
       SelectPlay: Select,
       CardPlay: Card,
-      PaginationPlay: Pagination
+      PaginationPlay: Pagination,
+      TabsPlay: Tabs,
+      TabPanePlay: TabPane
     }
   }
 </script>

@@ -38,6 +38,9 @@
 [Pagination 分页](http://mvui.savoygu.com/#/pagination
 )
 
+[Tabs 标签页](http://mvui.savoygu.com/#/tabs
+)
+
 ...
 
 comming soon

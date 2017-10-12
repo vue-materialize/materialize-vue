@@ -16,22 +16,22 @@
       }
     },
     methods: {
-       chooseNext () {
-         let next = this.gaps.indexOf(this.withGap) + 1
-         next = next === this.gaps.length ? 0 : next
-         this.withGap = this.gaps[next]
-       },
-       loopSwitch () {
-         this.rgTimer = setInterval(_ => {
-            let next = this.radioGroups.indexOf(this.radioGroup) + 1
-            next = next === this.radioGroups.length ? 0 : next
-            this.radioGroup = this.radioGroups[next]
-         }, 500)
-       },
-       shutdownSwitch () {
-         clearInterval(this.rgTimer)
-         this.rgTimer = null
-       }
+     chooseNext () {
+       let next = this.gaps.indexOf(this.withGap) + 1
+       next = next === this.gaps.length ? 0 : next
+       this.withGap = this.gaps[next]
+     },
+     loopSwitch () {
+       this.rgTimer = setInterval(_ => {
+          let next = this.radioGroups.indexOf(this.radioGroup) + 1
+          next = next === this.radioGroups.length ? 0 : next
+          this.radioGroup = this.radioGroups[next]
+       }, 500)
+     },
+     shutdownSwitch () {
+       clearInterval(this.rgTimer)
+       this.rgTimer = null
+     }
     },
     mounted () {
       this.loopSwitch()

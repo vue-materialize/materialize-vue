@@ -17,5 +17,7 @@
   "option": "./packages/option/index.js",
   "option-group": "./packages/option-group/index.js",
   "card": "./packages/card/index.js",
-  "pagination": "./packages/pagination/index.js"
+  "pagination": "./packages/pagination/index.js",
+  "tabs": "./packages/tabs/index.js",
+  "tab-pane": "./packages/tab-pane/index.js"
 }

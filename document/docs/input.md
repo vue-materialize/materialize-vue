@@ -1,11 +1,11 @@
 <script>
-    export default {
-        data () {
-            return {
-                hobby: ''
-            }
-        }
+  export default {
+    data () {
+      return {
+        hobby: ''
+      }
     }
+  }
 </script>
 ## Input 输入框
 

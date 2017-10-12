@@ -26,7 +26,7 @@ const registerRoute = (navConfig) => {
 
   route.push({
     path: '/',
-    redirect: '/pagination',
+    redirect: '/tabs',
     component: load('component'),
     children: []
   })

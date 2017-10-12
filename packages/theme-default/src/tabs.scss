@@ -1,3 +1,15 @@
+@import "color";
+@import "variables";
+
+.mv-tabs {
+  .carousel {
+    .carousel-item {
+      &.mv-tab-pane {
+        height: auto;
+      }
+    }
+  }
+}
 .tabs {
   &.tabs-transparent {
     background-color: transparent;

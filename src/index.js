@@ -19,6 +19,8 @@ import Option from '../packages/option/index.js'
 import OptionGroup from '../packages/option-group/index.js'
 import Card from '../packages/card/index.js'
 import Pagination from '../packages/pagination/index.js'
+import Tabs from '../packages/tabs/index.js'
+import TabPane from '../packages/tab-pane/index.js'
 
 const components = [
   Button,
@@ -39,7 +41,9 @@ const components = [
   Option,
   OptionGroup,
   Card,
-  Pagination
+  Pagination,
+  Tabs,
+  TabPane
 ]
 
 const install = function (Vue, opts = {}) {
@@ -77,5 +81,7 @@ export default {
   Option,
   OptionGroup,
   Card,
-  Pagination
+  Pagination,
+  Tabs,
+  TabPane
 }

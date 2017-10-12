@@ -1,37 +1,37 @@
 <script>
-    export default {
-        data () {
-          return {
-            right: false,
-            gap: false
-          }
-        },
-        mounted () {
-            this.$nextTick(_ => {
-                let demos = document.querySelectorAll('.source')
-                demos[2].style.padding = '0'
-            })
-        }
+  export default {
+    data () {
+      return {
+        right: false,
+        gap: false
+      }
+    },
+    mounted () {
+      this.$nextTick(_ => {
+        let demos = document.querySelectorAll('.source')
+        demos[2].style.padding = '0'
+      })
     }
+  }
 </script>
 <style lang="scss">
-    .demo-badge {
-      .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-        &:last-child {
-           border-bottom: none;
-        }
-      }
-      .demonstration {
-        display: block;
-        color: #8492a6;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 20px;
+  .demo-badge {
+    .block {
+      padding: 30px 24px;
+      overflow: hidden;
+      border-bottom: 1px solid #eff2f6;
+      &:last-child {
+         border-bottom: none;
       }
     }
+    .demonstration {
+      display: block;
+      color: #8492a6;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
 </style>
 ## Badge 徽章
 
@@ -98,7 +98,7 @@
   <mv-badge is-new caption="521"></mv-badge>
   <mv-badge is-new color="blue" caption="521"></mv-badge>
   <mv-badge is-new color="red" caption="521"></mv-badge>
-  
+
   <mv-badge caption="521 已读"></mv-badge>
   <mv-badge is-new caption="521 已读"></mv-badge>
   <mv-badge is-new color="blue" caption="521 已读"></mv-badge>
