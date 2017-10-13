@@ -1,13 +1,12 @@
 <template>
   <li @click="selectOptionClick"
-    :class="{
-      'selected': itemSelected,
-      'disabled': disabled
-      }"
-  >
+      :class="{
+        'selected': itemSelected,
+        'disabled': isDisabled
+      }">
     <slot>
       <span>
-        <mv-checkbox v-if="this.parent.multiple" v-model="checkbox" vertical>{{ currentLabel }}</mv-checkbox>
+        <mv-checkbox v-if="parent.multiple" v-model="checked" vertical>{{ currentLabel }}</mv-checkbox>
         <template v-else>{{ currentLabel }}</template>
       </span>
     </slot>
@@ -15,38 +14,45 @@
 </template>
 <script>
   import Emitter from 'mvui/src/mixins/emitter'
+  import Finder from 'mvui/src/mixins/finder'
   import MvCheckbox from 'mvui/packages/checkbox'
+  import {getValueByPath} from 'main/utils/util'
 
   export default {
     name: 'MvOption',
 
-    mixins: [Emitter],
+    componentName: 'MvOption',
+
+    mixins: [Emitter, Finder],
 
     props: {
       label: [String, Number],
       value: {
         required: true
       },
-      defatultOption: {
-        type: String
-      },
-      disabled: {
-        type: Boolean,
-        default: false
-      }
+      disabled: Boolean
     },
+
     data () {
       return {
-        avisible: true,
-        checkbox: false
+        checked: false
       }
     },
+
     components: {
       MvCheckbox
     },
+
     computed: {
       isObject () {
         return Object.prototype.toString.call(this.value).toLowerCase() === '[object object]'
+      },
+      isDisabled () {
+        let optionGroup = this.findParentComponent('MvOptionGroup')
+        if (optionGroup) {
+          return optionGroup.disabled
+        }
+        return this.disabled
       },
       currentLabel () {
         return this.label || (this.isObject ? '' : this.value)
@@ -56,9 +62,9 @@
       },
       itemSelected () {
         if (!this.parent.multiple) {
-          return this.isEqual(this.label, this.parent.selectedLabel)
+          return this.isEqual(this.value, this.parent.value)
         } else {
-          return this.contains(this.parent.selectedLabel, this.label)
+          return this.contains(this.parent.value, this.value)
         }
       },
       parent () {
@@ -69,10 +75,11 @@
         return result
       }
     },
+
     methods: {
       selectOptionClick (ev) {
         if (ev.target.tagName === 'INPUT') return
-        if (this.disabled !== true) {
+        if (!this.isDisabled) {
           this.dispatch('MvSelect', 'handleOptionClick', this)
         }
       },
@@ -81,7 +88,7 @@
           return a === b
         } else {
           const valueKey = this.parent.valueKey
-          return this.getValueByPath(a, valueKey) === this.getValueByPath(b, valueKey)
+          return getValueByPath(a, valueKey) === getValueByPath(b, valueKey)
         }
       },
       contains (arr = [], target) {
@@ -90,31 +97,18 @@
         } else {
           const valueKey = this.parent.valueKey
           return arr.some(item => {
-            return this.getValueByPath(item, valueKey) === this.getValueByPath(target, valueKey)
+            return getValueByPath(item, valueKey) === getValueByPath(target, valueKey)
           })
         }
-      },
-      getValueByPath (object, prop) {
-        prop = prop || ''
-        const paths = prop.split('.')
-        let current = object
-        let result = null
-        for (let i = 0, j = paths.length; i < j; i++) {
-          const path = paths[i]
-          if (!current) break
-
-          if (i === j - 1) {
-            result = current[path]
-            break
-          }
-          current = current[path]
-        }
-        return result
       }
     },
+
     created () {
       this.parent.options.push(this)
       this.parent.cachedOptions.push(this)
+      if (this.parent.multiple) {
+        this.checked = this.contains(this.parent.value, this.value)
+      }
     }
   }
 </script>

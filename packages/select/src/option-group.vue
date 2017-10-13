@@ -8,18 +8,15 @@
 </template>
 
 <script>
-  import Emitter from 'mvui/src/mixins/emitter'
   export default {
-    mixins: [Emitter],
     name: 'MvOptionGroup',
+
+    componentName: 'MvOptionGroup',
+
     props: {
       label: String,
-      disabled: {
-        type: Boolean,
-        default: false
-      }
+      disabled: Boolean
     }
   }
-
 </script>
 

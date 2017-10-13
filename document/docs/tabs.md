@@ -19,14 +19,15 @@
   }
 </script>
 <style>
-    .demo-tabs .block {
-        padding: 30px 24px;
-        overflow: hidden;
-        border-bottom: 1px solid #eff2f6;
-    }
-    .demo-tabs .block:last-child {
-        border-bottom: none;
-    }
+  .demo-tabs .block {
+    padding: 30px 24px;
+    overflow: hidden;
+    border-bottom: 1px solid #eff2f6;
+  }
+
+  .demo-tabs .block:last-child {
+    border-bottom: none;
+  }
 </style>
 ## Tabs 标签页
 

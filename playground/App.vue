@@ -1,6 +1,6 @@
 <template>
   <div style="margin: 20px;">
-    <tabs-play></tabs-play>
+    <select-play></select-play>
   </div>
 </template>
 <script>

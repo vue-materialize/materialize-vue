@@ -1,7 +1,3 @@
-/**
- * Created by pc on 2017/9/29.
- */
-
 const clickoutsideContext = '@@clickoutsideContext'
 
 export default {
